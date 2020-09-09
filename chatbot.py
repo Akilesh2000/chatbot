@@ -39,7 +39,7 @@ def main():
   BOT_TOKEN= os.getenv("BOT_TOKEN")
   u = Updater(BOT_TOKEN, use_context=True)
   dp = u.dispatcher
-  dp.add_handler(CommandHandler("ledoff",ledoff))
+  dp.add_handler(CommandHandler("ledoff",ledoff)) 
   dp.add_handler(CommandHandler("ledon",ledon))
   dp.add_handler(MessageHandler(Filters.text & ~Filters.command, echo))
   u.start_polling()
